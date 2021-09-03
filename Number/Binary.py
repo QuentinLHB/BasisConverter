@@ -20,3 +20,7 @@ class Binary:
 
     def toHexadecimal(self):
         return Decimal(self.toDecimal()).toHexadecimal()
+
+    @staticmethod
+    def isBinary(number: int):
+        return number == 0 or number == 1

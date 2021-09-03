@@ -27,7 +27,13 @@ class Hexadecimal:
             b10 = int(b16)
             return b10
         except:
-            if (ord(b16) >= ord("A") & ord(b16) <= ord("F")):
+            if ord("A") <= ord(b16) <= ord("F"):
                 return ord(b16) - 55  # ASCII of A = 65, 65-55 = 10
             else:
                 return 0
+
+    @staticmethod
+    def isHexadecimal(number: str):
+        if number == "":
+            return False
+        return number.isnumeric() or (ord("A") <= ord(number) <= ord("F"))
